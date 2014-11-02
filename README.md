@@ -38,4 +38,6 @@ The other aspect you may want to adjust or remove is the bottom padding on grid 
 
 ## Demo
 
-I've included a demo of the grid in action. You can open index.html and see the grid working, but if you want to tweak the settings yourself, you'll just need to bring the SASS partials into your own local dev environment. My demo's source files rely on dependencies like Compass, Breakpoint, and Grunt, but this grid is meant to be incorporated into your own workflow. Set your own breakpoints how you like, compile your SASS using whatever tool is most comfortable.
+I've included files demonstrating the grid in action, or you can [view it here](http://www.matthewleedesign.com/justify/). 
+
+If you want to tweak the settings yourself, you'll just need to bring the SASS partials into your own local dev environment. My demo's source files rely on dependencies like Compass, Breakpoint, and Grunt, but this grid is meant to be incorporated into your own workflow. Set your own breakpoints how you like, compile your SASS using whatever tool is most comfortable.
