@@ -2,7 +2,9 @@
 
 A responsive and semantic SASS grid partial by [Matt Lee](https://twitter.com/mattjohnlee). Inspired by [Patrick Kunka](https://twitter.com/PatrickKunka) and [Barrel](http://www.barrelny.com/). Grid use and mixins inspired by the excellent [Stubble](https://github.com/beardedstudio/stubble) starter kit from [Bearded](http://www.bearded.com/).
 
-Please note that this is a work in progress.<p>
+[View the demo here.](http://www.matthewleedesign.com/justify/
+
+Please note that this is a work in progress.
 
 ## How It Works
 
