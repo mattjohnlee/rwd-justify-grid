@@ -1,0 +1,427 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/_typography.scss */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 5, ../sass/_typography.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* use proper border-box sizing on everything */
+}
+
+/* line 9, ../sass/_typography.scss */
+h1, h2, h3, h4, h5, h6, p, li {
+  line-height: 1.5;
+  margin-bottom: .5em;
+}
+
+/* line 14, ../sass/_typography.scss */
+h1 {
+  font-size: 2.5em;
+}
+
+/* line 18, ../sass/_typography.scss */
+h2 {
+  font-size: 1.75em;
+}
+
+/* line 22, ../sass/_typography.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 26, ../sass/_typography.scss */
+h4 {
+  font-size: 1.25em;
+}
+
+/* line 30, ../sass/_typography.scss */
+h5 {
+  font-size: 1em;
+}
+
+/* line 34, ../sass/_typography.scss */
+h6 {
+  font-size: 0.875em;
+}
+
+/* line 38, ../sass/_typography.scss */
+p, li {
+  font-size: 1em;
+}
+
+/* 12-column grid */
+/* change this to make columns wider or narrower; gutters will automatically adjust; 8.333% will make grid gutterless */
+/* not used to literally create gutters--justification does that--but used to calculate width of multi-column elements */
+/* CSS classes for applying grid directly, instead of through sass */
+/* line 56, ../sass/_justify-grid.scss */
+.grid-container {
+  /* in case you want to apply the grid-container directly through an element's class and not a scss include */
+  text-align: justify;
+  font-size: 0.1px;
+  /* eliminate horizontal whitespace between grid columns */
+  line-height: 0.1px;
+  /* eliminate vertical whitespace between grid containers */
+  margin: 0 auto;
+}
+/* line 21, ../sass/_justify-grid.scss */
+.grid-container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 27, ../sass/_justify-grid.scss */
+.grid-container > * {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  font-size: 1rem;
+  /* resets font size to the base rem, allowing us to use em sizing like normal */
+  margin-bottom: 2.54545%;
+  /* vertical spacing between rows; set to 0 if you want a gutterless grid */
+  width: 6%;
+  /* defaults to single column, unless specified otherwise in CSS */
+}
+/* line 36, ../sass/_justify-grid.scss */
+.grid-container .gap {
+  display: inline-block;
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+/* line 60, ../sass/_justify-grid.scss */
+.column1 {
+  width: 6%;
+}
+
+/* line 63, ../sass/_justify-grid.scss */
+.column2 {
+  width: 14.54545%;
+}
+
+/* line 66, ../sass/_justify-grid.scss */
+.column3 {
+  width: 23.09091%;
+}
+
+/* line 69, ../sass/_justify-grid.scss */
+.column4 {
+  width: 31.63636%;
+}
+
+/* line 72, ../sass/_justify-grid.scss */
+.column5 {
+  width: 40.18182%;
+}
+
+/* line 75, ../sass/_justify-grid.scss */
+.column6 {
+  width: 48.72727%;
+}
+
+/* line 78, ../sass/_justify-grid.scss */
+.column7 {
+  width: 57.27273%;
+}
+
+/* line 81, ../sass/_justify-grid.scss */
+.column8 {
+  width: 65.81818%;
+}
+
+/* line 84, ../sass/_justify-grid.scss */
+.column9 {
+  width: 74.36364%;
+}
+
+/* line 87, ../sass/_justify-grid.scss */
+.column10 {
+  width: 82.90909%;
+}
+
+/* line 90, ../sass/_justify-grid.scss */
+.column11 {
+  width: 91.45455%;
+}
+
+/* line 93, ../sass/_justify-grid.scss */
+.column12 {
+  width: 100%;
+}
+
+/* line 1, ../sass/_demo-layout.scss */
+body {
+  padding: 5%;
+}
+
+/* line 5, ../sass/_demo-layout.scss */
+.grid-ruler {
+  text-align: justify;
+  font-size: 0.1px;
+  /* eliminate horizontal whitespace between grid columns */
+  line-height: 0.1px;
+  /* eliminate vertical whitespace between grid containers */
+  margin: 0 auto;
+}
+/* line 21, ../sass/_justify-grid.scss */
+.grid-ruler:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 27, ../sass/_justify-grid.scss */
+.grid-ruler > * {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  font-size: 1rem;
+  /* resets font size to the base rem, allowing us to use em sizing like normal */
+  margin-bottom: 2.54545%;
+  /* vertical spacing between rows; set to 0 if you want a gutterless grid */
+  width: 6%;
+  /* defaults to single column, unless specified otherwise in CSS */
+}
+/* line 36, ../sass/_justify-grid.scss */
+.grid-ruler .gap {
+  display: inline-block;
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+/* line 8, ../sass/_demo-layout.scss */
+.grid-ruler > * {
+  height: 1em;
+  background: #ee3523;
+}
+
+/* line 14, ../sass/_demo-layout.scss */
+.layout {
+  text-align: justify;
+  font-size: 0.1px;
+  /* eliminate horizontal whitespace between grid columns */
+  line-height: 0.1px;
+  /* eliminate vertical whitespace between grid containers */
+  margin: 0 auto;
+}
+/* line 21, ../sass/_justify-grid.scss */
+.layout:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 27, ../sass/_justify-grid.scss */
+.layout > * {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  font-size: 1rem;
+  /* resets font size to the base rem, allowing us to use em sizing like normal */
+  margin-bottom: 2.54545%;
+  /* vertical spacing between rows; set to 0 if you want a gutterless grid */
+  width: 6%;
+  /* defaults to single column, unless specified otherwise in CSS */
+}
+/* line 36, ../sass/_justify-grid.scss */
+.layout .gap {
+  display: inline-block;
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+/* line 17, ../sass/_demo-layout.scss */
+.layout > * {
+  padding: 2rem;
+  /*optional, if you want padding on grid units */
+  min-height: 100px;
+  background: #f5ee31;
+}
+/* line 23, ../sass/_demo-layout.scss */
+.layout .sidebar-left {
+  width: 100%;
+}
+@media (min-width: 60em) {
+  /* line 23, ../sass/_demo-layout.scss */
+  .layout .sidebar-left {
+    width: 23.09091%;
+  }
+}
+@media (min-width: 80em) {
+  /* line 23, ../sass/_demo-layout.scss */
+  .layout .sidebar-left {
+    width: 14.54545%;
+  }
+}
+/* line 33, ../sass/_demo-layout.scss */
+.layout .body {
+  width: 100%;
+}
+@media (min-width: 60em) {
+  /* line 33, ../sass/_demo-layout.scss */
+  .layout .body {
+    width: 48.72727%;
+  }
+}
+@media (min-width: 80em) {
+  /* line 33, ../sass/_demo-layout.scss */
+  .layout .body {
+    width: 65.81818%;
+  }
+}
+/* line 42, ../sass/_demo-layout.scss */
+.layout .body .grid-demo {
+  text-align: justify;
+  font-size: 0.1px;
+  /* eliminate horizontal whitespace between grid columns */
+  line-height: 0.1px;
+  /* eliminate vertical whitespace between grid containers */
+  margin: 0 auto;
+}
+/* line 21, ../sass/_justify-grid.scss */
+.layout .body .grid-demo:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 27, ../sass/_justify-grid.scss */
+.layout .body .grid-demo > * {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  font-size: 1rem;
+  /* resets font size to the base rem, allowing us to use em sizing like normal */
+  margin-bottom: 2.54545%;
+  /* vertical spacing between rows; set to 0 if you want a gutterless grid */
+  width: 6%;
+  /* defaults to single column, unless specified otherwise in CSS */
+}
+/* line 36, ../sass/_justify-grid.scss */
+.layout .body .grid-demo .gap {
+  display: inline-block;
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+/* line 45, ../sass/_demo-layout.scss */
+.layout .body .grid-demo > * {
+  height: 4em;
+  background: green;
+  width: 48.72727%;
+}
+@media (min-width: 40em) {
+  /* line 45, ../sass/_demo-layout.scss */
+  .layout .body .grid-demo > * {
+    width: 31.63636%;
+  }
+}
+@media (min-width: 60em) {
+  /* line 45, ../sass/_demo-layout.scss */
+  .layout .body .grid-demo > * {
+    width: 23.09091%;
+  }
+}
+@media (min-width: 80em) {
+  /* line 45, ../sass/_demo-layout.scss */
+  .layout .body .grid-demo > * {
+    width: 14.54545%;
+  }
+}
+/* line 62, ../sass/_demo-layout.scss */
+.layout .sidebar-right {
+  width: 100%;
+}
+@media (min-width: 60em) {
+  /* line 62, ../sass/_demo-layout.scss */
+  .layout .sidebar-right {
+    width: 23.09091%;
+  }
+}
+@media (min-width: 80em) {
+  /* line 62, ../sass/_demo-layout.scss */
+  .layout .sidebar-right {
+    width: 14.54545%;
+  }
+}
+/* line 72, ../sass/_demo-layout.scss */
+.layout footer {
+  width: 100%;
+}

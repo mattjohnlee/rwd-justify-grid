@@ -1,0 +1,76 @@
+body {
+	padding: 5%;
+}
+
+.grid-ruler {
+	@include grid-container;
+
+	> * {
+		height: 1em;
+		background: $red;
+	}	
+}
+
+.layout {
+	@include grid-container;
+
+	> * {
+		padding: 2rem; /*optional, if you want padding on grid units */
+		min-height: 100px;
+		background: $yellow;
+	}
+
+	.sidebar-left {
+		@include column(12);
+		@include breakpoint($m){
+			@include column(3);
+		}
+		@include breakpoint($l){
+			@include column(2);
+		}
+	}
+
+	.body {
+		@include column(12);
+		@include breakpoint($m){
+			@include column(6);
+		}
+		@include breakpoint($l){
+			@include column(8);
+		}
+
+		.grid-demo {
+			@include grid-container;
+
+			> * {
+				height: 4em;
+				background: $green;
+				@include column(6);
+				@include breakpoint($s){
+					@include column(4);
+				}
+				@include breakpoint($m){
+					@include column(3);
+				}
+				@include breakpoint($l){
+					@include column(2);
+				}
+			}	
+		}
+	}
+
+	.sidebar-right {
+		@include column(12);
+		@include breakpoint($m){
+			@include column(3);
+		}
+		@include breakpoint($l){
+			@include column(2);
+		}
+	}
+
+	footer {
+		@include column(12);
+	}
+}
+
