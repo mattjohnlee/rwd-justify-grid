@@ -28,6 +28,7 @@ $gutterwidth: (100% - ($columnwidth*12))/11; /* not used to literally create gut
 		display: inline-block;
 		text-align: left;
 		vertical-align: top;
+		line-height: initial; /* resets the .01px line height established by the grid */
 		font-size: 1rem; /* resets font size to the base rem, allowing us to use em sizing like normal */
 		margin-bottom: $gutterwidth; /* vertical spacing between rows; set to 0 if you want a gutterless grid */
 		width: $columnwidth; /* defaults to single column, unless specified otherwise in CSS */
