@@ -12,18 +12,18 @@ Before you do anything else with the grid, you should read [Text-align: Justify 
 
 I loved this idea, but wanted to make it practical for reuse in multiple projects. I had a few main goals in mind:
 
-*Instead of just evenly distributing items (like a photo grid), make it useful for layouts where different content spans different numbers of columns.
-*Allow the user to change how many columns a given element should span at different breakpoints.
-*Assign column settings through SASS mixins instead of classes, so that the HTML stays clean and semantic.
+* Instead of just evenly distributing items (like a photo grid), make it useful for layouts where different content spans different numbers of columns.
+* Allow the user to change how many columns a given element should span at different breakpoints.
+* Assign column settings through SASS mixins instead of classes, so that the HTML stays clean and semantic.
 
 ## How To Use It
 
-*Include _justify-grid.scss somewhere in your directory of SASS partials.
-*Add "@include grid-container" to the parent element containing the grid-based content
-*The grid is 12 columns. Each object in the grid should be assigned a mixin that declares how many of the twelve columns that object uses. For example, if you have a three-column design where .body takes up two columns and .sidebar takes up one, .body would receive "@include column(8)" and .sidebar would receive "@include column(4)."
-*Each object can then be assigned breakpoints, and you can freely change the column settings of each object at each breakpoint (assuming it all adds up to 12 total columns, of course). I use the excellent Compass extentsion [Breakpoint](https://github.com/at-import/breakpoint) to manage this, but you can do it however you like to set breakpoints.
-*If the number of elements in your grid will be changing, you may need to add .gap elements to make sure you don't have any partially empty rows. Per the original article on this concept: "To account for any and all possible numbers of elements on the last row, the number of 'placeholder' elements you will need to add is equal to the maximum number of elements per row, minus 2." Insert these at the end of your grid. (I know this point is a little confusing, but you only need to worry about it in grid situations where you don't totally control the number of elements. Again, reread the original article for more details.)
-*Note that the grid sets the line height to 0.1px eliminate vertical whitespace between grid containers, so in case the content appears smushed together, make sure it has a line height set.
+* Include _justify-grid.scss somewhere in your directory of SASS partials.
+* Add "@include grid-container" to the parent element containing the grid-based content
+* The grid is 12 columns. Each object in the grid should be assigned a mixin that declares how many of the twelve columns that object uses. For example, if you have a three-column design where .body takes up two columns and .sidebar takes up one, .body would receive "@include column(8)" and .sidebar would receive "@include column(4)."
+* Each object can then be assigned breakpoints, and you can freely change the column settings of each object at each breakpoint (assuming it all adds up to 12 total columns, of course). I use the excellent Compass extentsion [Breakpoint](https://github.com/at-import/breakpoint) to manage this, but you can do it however you like to set breakpoints.
+* If the number of elements in your grid will be changing, you may need to add .gap elements to make sure you don't have any partially empty rows. The number of .gap elements you will need is equal to the maximum number of elements per row, minus 2." Insert these at the end of your grid. (I know this is a little confusing, but you only need to worry about it in situations where you don't totally control the number of grid elements. Reread the original article for more details.)
+* Note that the grid sets the line height to 0.1px eliminate vertical whitespace between grid containers, so in case the content appears smushed together, make sure it has a line height set.
 
 If you really want to be unsemantic, I've included CSS classes that will apply the grid properties as well, but of course they can't be adjusted over various breakpoints the way SASS mixins can.
 
