@@ -31,7 +31,7 @@ If you really want to be unsemantic, I've included CSS classes that will apply t
 
 The grid's math is based on the width of each column, which is set to a percentage of the total page width. The gutter widths aren't specified, but are calculated on the fly by the justification property. I've initially set columns to have a 6% width. This means the twelve columns take up 72% of the screen (6% * 12), and each gutter is about 2.5454% (28% / 11). The wider you make the columns, the narrower the gutters get.
 
-If you want to play around with adjusting your column/gutter width, simply tweak the $columnwidth variable in the SASS partial. If you want a totally gutterless grid, divide 100% by the total number of columns. In this case, $columnwidth: 8.3333% would give you a gutterless grid.
+If you want to play around with adjusting your column/gutter width, simply tweak the $columnwidth variable in the SASS partial. If you want a totally gutterless grid, divide 100% by the total number of columns. In the case of a 12-column grid, $columnwidth: 8.3333% would give you a gutterless grid.
 
 Note that the grid _does_ calculate the gutter width, but it doesn't directly use that number to control the actual gutters. Instead, it's used to calculate the width of elements that span multiple columns (since their width needs to include the columns _and_ the gutters they span).
 
