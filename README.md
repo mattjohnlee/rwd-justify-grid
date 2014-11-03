@@ -33,7 +33,7 @@ The grid's math is based on the width of each column, which is set to a percenta
 
 If you want to play around with adjusting your column/gutter width, simply tweak the $columnwidth variable in the SASS partial. If you want a totally gutterless grid, divide 100% by the total number of columns. In the case of a 12-column grid, $columnwidth: 8.3333% would give you a gutterless grid.
 
-Note that the grid _does_ calculate the gutter width, but it doesn't directly use that number to control the actual gutters. Instead, it's used to calculate the width of elements that span multiple columns (since their width needs to include the columns _and_ the gutters they span).
+Note that the variable $gutterwidth _does_ calculate the width of each gutter, but the grid doesn't directly use that number to control the actual gutters. Instead, it's used to calculate the width of elements that span multiple columns (since their width needs to include the columns _and_ the gutters they span).
 
 The other aspect you may want to adjust or remove is the bottom padding on grid items (line 32 in _justify-grid.scss). This gives each element a bottom margin equal to the gutter width, so the end result is a grid of objects with perfectly even margins all around. It's a nice feature for things like photo grids, but might not be necessary or desired in other layout situations.
 
