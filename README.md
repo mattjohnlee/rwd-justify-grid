@@ -2,9 +2,9 @@
 
 A responsive and semantic SASS grid partial by [Matt Lee](https://twitter.com/mattjohnlee). Inspired by [Patrick Kunka](https://twitter.com/PatrickKunka) and [Barrel](http://www.barrelny.com/). Grid use and mixins inspired by the excellent [Stubble](https://github.com/beardedstudio/stubble) starter kit from [Bearded](http://www.bearded.com/).
 
-[View the demo here.](http://www.matthewleedesign.com/justify/)
+Built with love while serving on Kings County jury duty, closed in a room all day with no wifi. Please note that this is a work in progress. 
 
-Please note that this is a work in progress.
+[View the demo here.](http://www.matthewleedesign.com/justify/) Codepen coming soon. Pinky swear.
 
 ## How It Works
 
@@ -23,7 +23,7 @@ I loved this idea, but wanted to make it practical for reuse in multiple project
 * The grid is 12 columns. Each object in the grid should be assigned a mixin that declares how many of the twelve columns that object uses. For example, if you have a three-column design where .body takes up two columns and .sidebar takes up one, .body would receive "@include column(8)" and .sidebar would receive "@include column(4)."
 * Each object can then be assigned breakpoints, and you can freely change the column settings of each object at each breakpoint (assuming it all adds up to 12 total columns, of course). I use the excellent Compass extentsion [Breakpoint](https://github.com/at-import/breakpoint) to manage this, but you can do it however you like to set breakpoints.
 * If the number of elements in your grid will be changing, you may need to add .gap elements to make sure you don't have any partially empty rows. The number of .gap elements you will need is equal to the maximum number of elements per row, minus 2. Insert these at the end of your grid. (I know this is a little confusing, but you only need to worry about it in situations where you don't totally control the number of grid elements. [Reread the original article](http://www.barrelny.com/) for more details.)
-* Note that the grid sets the line height to 0.1px eliminate vertical whitespace between grid containers, so in case the content appears smushed together, make sure it has a defined line height.
+* Note that the grid sets the line height to 0.1px to eliminate vertical whitespace between grid containers, so in case the content appears smushed together, make sure it has a defined line height.
 
 If you really want to be unsemantic, I've included CSS classes that will apply the grid properties as well, but of course they can't be adjusted over various breakpoints the way SASS mixins can.
 
@@ -35,7 +35,7 @@ If you want to play around with adjusting your column/gutter width, simply tweak
 
 Note that the variable $gutterwidth _does_ calculate the width of each gutter, but the grid doesn't directly use that number to control the actual gutters. Instead, it's used to calculate the width of elements that span multiple columns (since their width needs to include the columns _and_ the gutters they span).
 
-The other aspect you may want to adjust or remove is the bottom padding on grid items (line 32 in _justify-grid.scss). This gives each element a bottom margin equal to the gutter width, so the end result is a grid of objects with perfectly even margins all around. It's a nice feature for things like photo grids, but might not be necessary or desired in other layout situations.
+The other aspect you may want to adjust or remove is the bottom margin on grid items (line 32 in _justify-grid.scss). This gives each element a bottom margin equal to the gutter width, so the end result is a grid of objects with perfectly even margins all around. It's a nice feature for things like photo grids, but might not be necessary or desired in other layout situations.
 
 ## Demo
 
